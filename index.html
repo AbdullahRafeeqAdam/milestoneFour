@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume - MilestoneFour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Enter Your Details</h2>
+        <form id="resumeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="summary">Professional Summary:</label>
+            <textarea id="summary" required></textarea>
+
+            <label for="education">Education:</label>
+            <textarea id="education" required></textarea>
+
+            <label for="experience">Work Experience:</label>
+            <textarea id="experience" required></textarea>
+
+            <label for="skills">Skills (comma-separated):</label>
+            <input type="text" id="skills" required>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+    <div id="resume" class="resume-container" style="display: none;">
+        <h1 id="resumeName"></h1>
+        <button class="edit-btn" onclick="editField('name')">Edit</button>
+        <p id="resumeLocation"></p>
+        <button class="edit-btn" onclick="editField('location')">Edit</button>
+        <p id="resumeEmail"></p>
+        <button class="edit-btn" onclick="editField('email')">Edit</button>
+        <hr>
+        <h2>Professional Summary</h2>
+        <p id="resumeSummary"></p>
+        <button class="edit-btn" onclick="editField('summary')">Edit</button>
+
+        <h2>Education</h2>
+        <p id="resumeEducation"></p>
+        <button class="edit-btn" onclick="editField('education')">Edit</button>
+
+        <h2>Work Experience</h2>
+        <p id="resumeExperience"></p>
+        <button class="edit-btn" onclick="editField('experience')">Edit</button>
+
+        <h2>Skills</h2>
+        <ul id="resumeSkills"></ul>
+        <button class="edit-btn" onclick="editField('skills')">Edit</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
